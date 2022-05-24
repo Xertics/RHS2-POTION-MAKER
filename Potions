@@ -1,0 +1,170 @@
+getgenv().potion1 = true
+getgenv().potion2 = true
+getgenv().potion3 = true
+getgenv().potion4 = true
+getgenv().potion5 = true
+getgenv().potion6 = true
+getgenv().potion7 = true
+
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("X RHS2 X")
+
+local b = w:CreateFolder("RHS2 POTION MAKER")
+
+
+
+
+
+
+b:Toggle("BloxyCola",function(bool)
+    getgenv().potion1 = bool
+    print(shared.toggle)
+    if bool then
+        potion1();
+    end
+end)
+
+b:Toggle("WitchesBrew",function(bool)
+    getgenv().potion2 = bool
+    print(shared.toggle)
+    if bool then
+        potion2();
+    end
+end)
+
+b:Toggle("GhastlyBrew",function(bool)
+    getgenv().potion3 = bool
+    print(shared.toggle)
+    if bool then
+        potion3();
+    end
+end)
+
+b:Toggle("RedSpice",function(bool)
+    getgenv().potion4 = bool
+    print(shared.toggle)
+    if bool then
+        potion4();
+    end
+end)
+
+b:Toggle("GreenSpice",function(bool)
+    getgenv().potion5 = bool
+    print(shared.toggle)
+    if bool then
+        potion5();
+    end
+end)
+
+b:Toggle("DragonFire",function(bool)
+    getgenv().potion6 = bool
+    print(shared.toggle)
+    if bool then
+        potion6();
+    end
+end)
+
+b:Toggle("GoldenChalice",function(bool)
+    getgenv().potion7 = bool
+    print(shared.toggle)
+    if bool then
+        potion7();
+    end
+end)
+
+b:Label("Credits: Xertics#8797",{
+    TextSize = 18; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(17, 17, 17); -- Self Explaining
+    
+}) 
+
+b:Label("Keybind: RightCntrl",{
+    TextSize = 18; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(17, 17, 17); -- Self Explaining
+    
+}) 
+
+
+b:DestroyGui()
+
+
+function potion1()
+if getgenv().potion1 == true then
+   
+local args = {
+    [1] = "BloxyCola"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Jobs.ClubRed.MakePotion:FireServer(unpack(args))
+end
+end
+
+function potion2()
+if getgenv().potion2 == true then
+   
+local args = {
+    [1] = "WitchesBrew"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Jobs.ClubRed.MakePotion:FireServer(unpack(args))
+end
+end
+
+function potion3()
+if getgenv().potion3 == true then
+   
+local args = {
+    [1] = "GhastlyBrew"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Jobs.ClubRed.MakePotion:FireServer(unpack(args))
+end
+end
+
+function potion4()
+if getgenv().potion4 == true then
+   
+local args = {
+    [1] = "RedSpice"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Jobs.ClubRed.MakePotion:FireServer(unpack(args))
+end
+end
+
+function potion5()
+if getgenv().potion5 == true then
+   
+local args = {
+    [1] = "GreenSpice"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Jobs.ClubRed.MakePotion:FireServer(unpack(args))
+end
+end
+
+function potion6()
+if getgenv().potion6 == true then
+   
+local args = {
+    [1] = "DragonFire"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Jobs.ClubRed.MakePotion:FireServer(unpack(args))
+end
+end
+
+function potion7()
+if getgenv().potion7 == true then
+   
+local args = {
+    [1] = "GoldenChalice"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Jobs.ClubRed.MakePotion:FireServer(unpack(args))
+end
+end
